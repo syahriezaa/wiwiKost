@@ -4,8 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:wiwikost/config/themes/colours.dart';
 import 'package:wiwikost/constant/core/asset_const.dart';
-import 'package:wiwikost/modules/dashboard/controllers/dashboard_controllers.dart';
-import 'package:wiwikost/modules/dashboard/view/ui/dashboard_view.dart';
+import 'package:wiwikost/modules/features/booked/view/ui/booked_view.dart';
+import 'package:wiwikost/modules/features/dashboard/controllers/dashboard_controllers.dart';
+import 'package:wiwikost/modules/features/dashboard/view/ui/dashboard_view.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -20,7 +21,7 @@ class HomeView extends StatelessWidget {
               child: Obx(() => controller.currentIndex == 0
                   ? DashboardView()
                   : controller.currentIndex == 1
-                      ? Text('Pemesanan')
+                      ? BookedView()
                       : Text('Profile'))),
           Align(
             alignment: Alignment.bottomCenter,

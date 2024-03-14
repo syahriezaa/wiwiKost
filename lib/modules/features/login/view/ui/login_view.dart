@@ -92,6 +92,21 @@ class LoginView extends StatelessWidget {
               child: Text('Login'),
             ),
           ),
+          SizedBox(
+            width: 0.9.sw,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colours.greenPrimary1,
+              ),
+              onPressed: () {
+                Get.toNamed('/home');
+              },
+              child: Text(
+                'register',
+                style: TextStyle(color: Colours.white),
+              ),
+            ),
+          ),
         ],
       ),
     ));
