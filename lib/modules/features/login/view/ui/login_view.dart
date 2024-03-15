@@ -25,9 +25,9 @@ class LoginView extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: 'Email',
+                labelText: 'Username',
                 labelStyle: Theme.of(context).textTheme.labelLarge,
-                hintText: 'Masukkan email',
+                hintText: 'Masukkan username',
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colours.greenPrimary,
@@ -45,6 +45,7 @@ class LoginView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
                 labelStyle: Theme.of(context).textTheme.labelLarge,
@@ -99,7 +100,7 @@ class LoginView extends StatelessWidget {
                 primary: Colours.greenPrimary1,
               ),
               onPressed: () {
-                Get.toNamed('/home');
+                Get.toNamed('/register');
               },
               child: Text(
                 'register',
