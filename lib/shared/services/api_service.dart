@@ -1,10 +1,17 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:dio/dio.dart';
+import 'package:dio/io.dart';
 import 'package:wiwikost/constant/core/api_const.dart';
 
 class ApiServices {
   ApiServices._internal();
-
-  static Dio dioCall({Duration connectTimeout = const Duration(seconds: 20), String? token, String? authorization}) {
+  static Uint8List error = Uint8List(8);
+  static Dio dioCall(
+      {Duration connectTimeout = const Duration(seconds: 20),
+      String? token,
+      String? authorization}) {
     var headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
@@ -21,6 +28,14 @@ class ApiServices {
         connectTimeout: connectTimeout,
       ),
     );
+
+    // Disable certificate verification (use it cautiously)
+    (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
+        (HttpClient client) {
+      client.badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+      return client;
+    };
 
     return dio;
   }

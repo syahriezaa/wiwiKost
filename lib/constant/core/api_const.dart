@@ -1,26 +1,27 @@
-class ApiConst{
+class ApiConst {
   ApiConst._();
+
   ///Base url
-  static const String baseUrl="https://5017-158-140-172-121.ngrok-free.app/api/v1";
+  static const String baseUrl = "https://kos.brotani.com/api/v1";
 
   ///Auth API
-  static const String login="/auth/masuk";
+  static const String login = "/auth/register";
 
   ///Request OTP
-  static const String requestOtp="/auth/forgot-password/send-otp";
+  static const String requestOtp = "/auth/forgot-password/send-otp";
 
   ///Send OTP
-  static const String sendOtp='/auth/forgot-password/validate-otp';
+  static const String sendOtp = '/auth/forgot-password/validate-otp';
 
   ///Change Password
-  static const String changePassword='/auth/forgot-password/reset-password';
+  static const String changePassword = '/auth/forgot-password/reset-password';
 
   ///Dashboard API
-  static const String dashboard="/dashboard/jadwal-obat/";
+  static const String dashboard = "/dashboard/jadwal-obat/";
 
   ///Jadwal Obat Sesi
-  static const String jadwalObatSesi="/dashboard/jadwal-obat/sesi/";
+  static const String jadwalObatSesi = "/dashboard/jadwal-obat/sesi/";
 
   ///Set Riwayat
-  static const String setRiwayat="/dashboard/riwayat/set/";
+  static const String setRiwayat = "/dashboard/riwayat/set/";
 }

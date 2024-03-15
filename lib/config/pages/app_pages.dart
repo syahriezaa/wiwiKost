@@ -17,7 +17,7 @@ class AppPages {
       ),
       GetPage(
         name: AppRoutes.login,
-        page: () => const LoginView(),
+        page: () => LoginView(),
       ),
       //register
       GetPage(name: AppRoutes.register, page: () => const RegisterView()),

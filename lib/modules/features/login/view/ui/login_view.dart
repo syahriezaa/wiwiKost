@@ -4,10 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:wiwikost/config/themes/colours.dart';
 import 'package:wiwikost/constant/core/asset_const.dart';
+import 'package:wiwikost/modules/features/login/controllers/login_controllers.dart';
 
+// ignore: must_be_immutable
 class LoginView extends StatelessWidget {
-  const LoginView({super.key});
-
+  LoginView({super.key});
+  LoginControllers controller = Get.put(LoginControllers());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +26,7 @@ class LoginView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              controller: controller.usernameController,
               decoration: InputDecoration(
                 labelText: 'Username',
                 labelStyle: Theme.of(context).textTheme.labelLarge,
@@ -45,6 +48,7 @@ class LoginView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
+              controller: controller.passwordController,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
@@ -88,7 +92,7 @@ class LoginView extends StatelessWidget {
             width: 0.9.sw,
             child: ElevatedButton(
               onPressed: () {
-                Get.toNamed('/home');
+                controller.login();
               },
               child: const Text('Login'),
             ),
