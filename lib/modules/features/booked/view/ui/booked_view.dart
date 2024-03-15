@@ -30,7 +30,7 @@ class BookedView extends StatelessWidget {
                       color: Colours.greenPrimary4,
                       fontWeight: FontWeight.bold),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "lantai 1",
                   style: Theme.of(context).textTheme.bodySmall!.copyWith(
@@ -150,7 +150,7 @@ class BookedView extends StatelessWidget {
           SizedBox(
             height: 20.w,
           ),
-          Text("Tanggungan"),
+          const Text("Tanggungan"),
           Text(
             "Rp. 1.000.000",
             style: Theme.of(context)
@@ -163,7 +163,7 @@ class BookedView extends StatelessWidget {
           ),
           SizedBox(
               width: 0.9.sw,
-              child: PrimaryButton.noVerticalPadding(text: "Bayar")),
+              child: const PrimaryButton.noVerticalPadding(text: "Bayar")),
           Container(
             alignment: Alignment.center,
             width: 0.9.sw,

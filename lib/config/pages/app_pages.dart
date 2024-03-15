@@ -4,7 +4,7 @@ import 'package:wiwikost/modules/features/dashboard/view/ui/dashboard_view.dart'
 import 'package:wiwikost/modules/features/dashboard/view/ui/home_view.dart';
 import 'package:wiwikost/modules/features/login/view/ui/login_view.dart';
 import 'package:wiwikost/modules/features/register/view/ui/register_view.dart';
-import 'package:wiwikost/modules/features/start_screen/view/startScreen.dart';
+import 'package:wiwikost/modules/features/start_screen/view/start_screen.dart';
 
 class AppPages {
   AppPages._();
@@ -13,17 +13,17 @@ class AppPages {
     return [
       GetPage(
         name: AppRoutes.startscreen,
-        page: () => StartScreenView(),
+        page: () => const StartScreenView(),
       ),
       GetPage(
         name: AppRoutes.login,
-        page: () => LoginView(),
+        page: () => const LoginView(),
       ),
       //register
-      GetPage(name: AppRoutes.register, page: () => RegisterView()),
+      GetPage(name: AppRoutes.register, page: () => const RegisterView()),
       GetPage(
         name: AppRoutes.dashboard,
-        page: () => DashboardView(),
+        page: () => const DashboardView(),
       ),
       GetPage(
         name: AppRoutes.home,

@@ -8,6 +8,7 @@ import 'package:wiwikost/modules/features/booked/view/ui/booked_view.dart';
 import 'package:wiwikost/modules/features/dashboard/controllers/dashboard_controllers.dart';
 import 'package:wiwikost/modules/features/dashboard/view/ui/dashboard_view.dart';
 
+// ignore: must_be_immutable
 class HomeView extends StatelessWidget {
   HomeView({super.key});
   DashboardController controller = Get.put(DashboardController());
@@ -19,14 +20,14 @@ class HomeView extends StatelessWidget {
           Align(
               alignment: Alignment.center,
               child: Obx(() => controller.currentIndex == 0
-                  ? DashboardView()
+                  ? const DashboardView()
                   : controller.currentIndex == 1
-                      ? BookedView()
-                      : Text('Profile'))),
+                      ? const BookedView()
+                      : const Text('Profile'))),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colours.white,
               ),
               child: SizedBox(

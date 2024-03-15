@@ -28,12 +28,12 @@ class LoginView extends StatelessWidget {
                 labelText: 'Username',
                 labelStyle: Theme.of(context).textTheme.labelLarge,
                 hintText: 'Masukkan username',
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colours.greenPrimary,
                   ),
                 ),
-                border: UnderlineInputBorder(
+                border: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colours.greenPrimary,
                   ),
@@ -50,12 +50,12 @@ class LoginView extends StatelessWidget {
                 labelText: 'Password',
                 labelStyle: Theme.of(context).textTheme.labelLarge,
                 hintText: 'Masukkan password',
-                enabledBorder: UnderlineInputBorder(
+                enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colours.greenPrimary,
                   ),
                 ),
-                border: UnderlineInputBorder(
+                border: const UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colours.greenPrimary,
                   ),
@@ -90,19 +90,19 @@ class LoginView extends StatelessWidget {
               onPressed: () {
                 Get.toNamed('/home');
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
           ),
           SizedBox(
             width: 0.9.sw,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colours.greenPrimary1,
+                backgroundColor: Colours.greenPrimary1,
               ),
               onPressed: () {
                 Get.toNamed('/register');
               },
-              child: Text(
+              child: const Text(
                 'register',
                 style: TextStyle(color: Colours.white),
               ),

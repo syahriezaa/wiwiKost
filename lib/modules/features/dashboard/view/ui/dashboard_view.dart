@@ -21,7 +21,7 @@ class DashboardView extends StatelessWidget {
                     width: 1.sw,
                     height: 1.sh - (30.w + 60.w + 10.w * 3),
                     child: ListView.separated(
-                        itemBuilder: (context, index) => RoomCard(),
+                        itemBuilder: (context, index) => const RoomCard(),
                         separatorBuilder: (context, index) => SizedBox(
                               height: 10.w,
                             ),

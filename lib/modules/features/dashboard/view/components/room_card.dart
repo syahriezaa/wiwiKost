@@ -31,7 +31,7 @@ class RoomCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 padding: EdgeInsets.only(right: 20.w),
                 alignment: Alignment.centerLeft,

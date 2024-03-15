@@ -30,12 +30,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Username',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan Username',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -51,12 +51,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Nama Lengkap',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan Nama Lengkap',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -72,12 +72,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Password',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan password',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -93,12 +93,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Konfirmasi Password',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan password',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -115,12 +115,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Nomor HP',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan Nomor HP',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -136,12 +136,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'Alamat',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan Alamat',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
@@ -158,12 +158,12 @@ class RegisterView extends StatelessWidget {
                   labelText: 'NIK',
                   labelStyle: Theme.of(context).textTheme.labelLarge,
                   hintText: 'Masukkan NIK',
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
                   ),
-                  border: UnderlineInputBorder(
+                  border: const UnderlineInputBorder(
                     borderSide: BorderSide(
                       color: Colours.greenPrimary,
                     ),
