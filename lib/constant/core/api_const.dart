@@ -19,7 +19,7 @@ class ApiConst {
   static const String changePassword = '/auth/forgot-password/reset-password';
 
   ///Dashboard API
-  static const String dashboard = "/dashboard/jadwal-obat/";
+  static const String listRoom = "/room/list";
 
   ///Jadwal Obat Sesi
   static const String jadwalObatSesi = "/dashboard/jadwal-obat/sesi/";

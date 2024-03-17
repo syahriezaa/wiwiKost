@@ -8,6 +8,7 @@ class AssetConst {
   static const String icBooking = "assets/svg/ic_bookbutton.svg";
   static const String icProfile = "assets/svg/ic_profil.svg";
   static const String icUpload = 'assets/svg/ic_upload.svg';
+  static const String icEmpty = 'assets/svg/ic_empty.svg';
 
   ///gambar
   static const String figLogin = "assets/images/fig_login.png";

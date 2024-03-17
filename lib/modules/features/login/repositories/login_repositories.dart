@@ -10,8 +10,6 @@ class LoginRepositories {
 
   static Future<User> loginRepo(String username, String password) async {
     try {
-      _dio.interceptors
-          .add(LogInterceptor(requestBody: true, responseBody: true));
       final response = await _dio.post(ApiConst.login,
           data: {'username': username, 'password': password});
 
@@ -39,8 +37,8 @@ class LoginRepositories {
   ///request otp
   static Future<SucessResponse> requestOtpRepo(String username) async {
     try {
-      _dio.interceptors
-          .add(LogInterceptor(requestBody: true, responseBody: true));
+      // _dio.interceptors
+      //     .add(LogInterceptor(requestBody: true, responseBody: true));
       final response =
           await _dio.post(ApiConst.requestOtp, data: {'username': username});
 
@@ -63,8 +61,8 @@ class LoginRepositories {
   static Future<SucessResponse> sendOtpRepo(
       String phonenumber, String otp) async {
     try {
-      _dio.interceptors
-          .add(LogInterceptor(requestBody: true, responseBody: true));
+      // _dio.interceptors
+      //     .add(LogInterceptor(requestBody: true, responseBody: true));
       final response = await _dio.post(ApiConst.sendOtp,
           data: {'phone_number': phonenumber, 'otp': otp});
 

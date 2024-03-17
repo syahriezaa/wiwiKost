@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:wiwikost/constant/core/asset_const.dart';
+import 'package:wiwikost/shared/services/local_db_service/local_db_service.dart';
 import 'package:wiwikost/shared/widget/primary_button.dart';
 
 class StartScreenView extends StatelessWidget {
@@ -32,8 +33,13 @@ class StartScreenView extends StatelessWidget {
           width: 0.9.sw,
           child: PrimaryButton(
             text: "Get Started",
-            onPressed: () {
-              Get.toNamed('/login');
+            onPressed: () async {
+              String? token = await LocalDBService.getToken();
+              if (token != null) {
+                Get.toNamed('/home');
+              } else {
+                Get.toNamed('/login');
+              }
             },
           ),
         ),

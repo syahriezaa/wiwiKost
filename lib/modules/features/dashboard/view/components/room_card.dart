@@ -3,7 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wiwikost/config/themes/colours.dart';
 
 class RoomCard extends StatelessWidget {
-  const RoomCard({super.key});
+  final String roomNumber;
+  final String floor;
+  final String type;
+  final String price;
+  const RoomCard(
+      {super.key,
+      required this.roomNumber,
+      required this.floor,
+      required this.type,
+      required this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +36,7 @@ class RoomCard extends StatelessWidget {
                 padding: EdgeInsets.only(left: 20.w),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Kamar 1",
+                  "Kamar $roomNumber",
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
@@ -36,7 +45,7 @@ class RoomCard extends StatelessWidget {
                 padding: EdgeInsets.only(right: 20.w),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Lantai 1",
+                  "Lantai $floor",
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
@@ -46,7 +55,7 @@ class RoomCard extends StatelessWidget {
             padding: EdgeInsets.only(left: 20.w),
             alignment: Alignment.centerLeft,
             child: Text(
-              "Tipe:  Kamar mandi dalam",
+              "Tipe:  $type",
               style: Theme.of(context).textTheme.labelLarge,
             ),
           ),
@@ -54,7 +63,7 @@ class RoomCard extends StatelessWidget {
             padding: EdgeInsets.only(left: 20.w),
             alignment: Alignment.centerLeft,
             child: Text(
-              "Rp.1.000.000 - Rp.1.500.000",
+              "Rp.$price",
               style: Theme.of(context).textTheme.labelLarge!.copyWith(
                     color: Colours.greenPrimary1,
                   ),
