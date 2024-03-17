@@ -20,7 +20,10 @@ class AppPages {
         page: () => LoginView(),
       ),
       //register
-      GetPage(name: AppRoutes.register, page: () => const RegisterView()),
+      GetPage(
+        name: AppRoutes.register,
+        page: () => RegisterView(),
+      ),
       GetPage(
         name: AppRoutes.dashboard,
         page: () => const DashboardView(),

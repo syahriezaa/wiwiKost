@@ -46,3 +46,27 @@ class User {
     };
   }
 }
+
+class SucessResponse {
+  final String? message;
+  final String? statusCode;
+
+  SucessResponse({
+    this.message,
+    this.statusCode,
+  });
+
+  factory SucessResponse.fromJson(Map<String, dynamic> json) {
+    return SucessResponse(
+      message: json['message'],
+      statusCode: json['status_code'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'message': message,
+      'status_code': statusCode,
+    };
+  }
+}

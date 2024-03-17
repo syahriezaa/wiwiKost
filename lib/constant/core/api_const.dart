@@ -5,7 +5,9 @@ class ApiConst {
   static const String baseUrl = "https://kos.brotani.com/api/v1";
 
   ///Auth API
-  static const String login = "/auth/register";
+  static const String login = "/auth/login";
+
+  static const String register = "/auth/register";
 
   ///Request OTP
   static const String requestOtp = "/auth/forgot-password/send-otp";
