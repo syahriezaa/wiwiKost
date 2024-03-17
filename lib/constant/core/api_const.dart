@@ -10,10 +10,10 @@ class ApiConst {
   static const String register = "/auth/register";
 
   ///Request OTP
-  static const String requestOtp = "/auth/forgot-password/send-otp";
+  static const String requestOtp = "/auth/resend-otp";
 
   ///Send OTP
-  static const String sendOtp = '/auth/forgot-password/validate-otp';
+  static const String sendOtp = '/auth/verify';
 
   ///Change Password
   static const String changePassword = '/auth/forgot-password/reset-password';
