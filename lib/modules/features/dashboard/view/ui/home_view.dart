@@ -7,7 +7,7 @@ import 'package:wiwikost/constant/core/asset_const.dart';
 import 'package:wiwikost/modules/features/booked/view/ui/booked_view.dart';
 import 'package:wiwikost/modules/features/dashboard/controllers/dashboard_controllers.dart';
 import 'package:wiwikost/modules/features/dashboard/view/ui/dashboard_view.dart';
-import 'package:wiwikost/shared/services/local_db_service/local_db_service.dart';
+import 'package:wiwikost/modules/features/profile/view/ui/profile_view.dart';
 
 // ignore: must_be_immutable
 class HomeView extends StatelessWidget {
@@ -19,17 +19,15 @@ class HomeView extends StatelessWidget {
       body: Stack(
         children: [
           Align(
-              alignment: Alignment.center,
-              child: Obx(() => controller.currentIndex == 0
+            alignment: Alignment.center,
+            child: Obx(
+              () => controller.currentIndex == 0
                   ? DashboardView()
                   : controller.currentIndex == 1
-                      ? const BookedView()
-                      : InkWell(
-                          onTap: () {
-                            Get.toNamed('/login');
-                            LocalDBService.clearToken();
-                          },
-                          child: const Text('logoout')))),
+                      ? BookedView()
+                      : ProfileView(),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(

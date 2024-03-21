@@ -20,6 +20,16 @@ class ApiConst {
 
   ///Dashboard API
   static const String listRoom = "/room/list";
+  static const String occupancyDetails = "/room/information";
+
+  ///Room Detail
+  static const String detailRoom = "/room/register/room-list";
+
+  ///Register Occupy
+  static const String registerOccupy = "/room/register/occupy";
+
+  ///fill Resident
+  static const String fillResident = "/room/register/resident";
 
   ///Jadwal Obat Sesi
   static const String jadwalObatSesi = "/dashboard/jadwal-obat/sesi/";

@@ -43,6 +43,42 @@ class LocalDBService {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove('access_token');
   }
+
+  ///Set Token
+  static Future<void> setRoomIndex(String roomIndex) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('room_index', roomIndex);
+  }
+
+  ///Get Token
+  static Future<String?> getRoomIndex() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString('room_index');
+  }
+
+  ///Delete Token
+  static Future<void> clearRoomIndex() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('room_index');
+  }
+
+  ///Set Token
+  static Future<void> setIdOccupy(String idOccupy) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('id_occupy', idOccupy);
+  }
+
+  ///Get Token
+  static Future<String?> getIdOccupy() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString('id_occupy');
+  }
+
+  ///Delete Token
+  static Future<void> clearIdOccupy() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('id_occupy');
+  }
   // ///Set Phone And OTP
   // static Future<void> setPhoneNumber(String phoneNumber) async {
   //   SharedPreferences prefs = await SharedPreferences.getInstance();

@@ -44,7 +44,7 @@ class RegisterRepositories {
       final response = await _dio.post(ApiConst.register, data: formData);
 
       return SucessResponse.fromJson(response.data);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
         return SucessResponse(
           message: '',

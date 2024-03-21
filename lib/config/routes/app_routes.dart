@@ -14,8 +14,8 @@ class AppRoutes {
   static const String dashboard = '/dashborad';
   static const String home = '/home';
 
-  ///Modul detail Minum obbat
-  static const String logminumobat = '/logminumobat';
+  ///Modul Room
+  static const String room = '/room';
 
   /// Modul profil
   static const String detailProfileView = "/detailprofile";

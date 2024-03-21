@@ -6,7 +6,7 @@ class DashboardController extends GetxController {
   final _currentIndex = 0.obs;
 
   int get currentIndex => _currentIndex.value;
-  RxString typeRoomCode = 'All'.obs;
+  RxString typeRoomCode = 'all'.obs;
   RxString typeRoomName = 'Semua Kamar'.obs;
   RxString floor = 'all'.obs;
 
@@ -24,7 +24,7 @@ class DashboardController extends GetxController {
   }
 
   void changeTypeRoom(String type) {
-    if (type == 'All') {
+    if (type == 'all') {
       typeRoomCode.value = 'all';
       typeRoomName.value = 'Semua Kamar';
     }
@@ -48,14 +48,9 @@ class DashboardController extends GetxController {
       if (response.statusCode == '200' && response.status == 'success') {
         // Assign the list of rooms to the RxList
         rooms.assignAll(response.data);
-        print(rooms.length);
-      } else {
-        // Handle error response
-        print('Failed to fetch rooms: ${response.message}');
       }
     } catch (e) {
       // Handle any exceptions
-      print('Error fetching rooms: $e');
     }
   }
 }

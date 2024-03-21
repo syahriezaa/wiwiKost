@@ -25,6 +25,7 @@ class LoginRepositories {
           phoneNumber: '',
           address: '',
           nik: '',
+          isHaveRoom: '',
           accessToken: '',
           statusCode: e.response!.statusCode.toString(),
         );

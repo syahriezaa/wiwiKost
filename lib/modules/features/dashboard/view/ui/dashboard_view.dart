@@ -7,6 +7,7 @@ import 'package:wiwikost/constant/core/asset_const.dart';
 import 'package:wiwikost/modules/features/dashboard/controllers/dashboard_controllers.dart';
 import 'package:wiwikost/modules/features/dashboard/view/components/room_card.dart';
 import 'package:wiwikost/modules/models/room_models.dart';
+import 'package:wiwikost/shared/services/local_db_service/local_db_service.dart';
 
 // ignore: must_be_immutable
 class DashboardView extends StatelessWidget {
@@ -42,11 +43,17 @@ class DashboardView extends StatelessWidget {
                                   Room room = controller.rooms[index];
 
                                   // Construct and return a RoomCard widget with the room details
-                                  return RoomCard(
-                                    roomNumber: room.roomNumber,
-                                    floor: room.roomFloor,
-                                    type: room.roomType,
-                                    price: room.price.toString(),
+                                  return InkWell(
+                                    onTap: () {
+                                      LocalDBService.setRoomIndex(room.idRoom);
+                                      Get.toNamed('/room');
+                                    },
+                                    child: RoomCard(
+                                      roomNumber: room.roomNumber,
+                                      floor: room.roomFloor,
+                                      type: room.roomType,
+                                      price: room.price.toString(),
+                                    ),
                                   );
                                 } else {
                                   // If the index is out of bounds, return an empty Container

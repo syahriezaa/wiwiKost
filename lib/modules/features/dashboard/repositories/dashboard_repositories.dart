@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:wiwikost/constant/core/api_const.dart';
 import 'package:wiwikost/modules/models/room_models.dart';
@@ -34,7 +32,7 @@ class DashboardRepositories {
           await _dio.post(ApiConst.listRoom, data: formData, options: options);
 
       return RoomResponse.fromJson(response.data);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       if (e.response != null) {
         return RoomResponse(
           message: '',

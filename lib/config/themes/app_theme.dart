@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wiwikost/config/themes/colours.dart';
 
-
 class AppTheme {
   AppTheme._();
 
@@ -111,6 +110,15 @@ class AppTheme {
             secondary: Colours.white,
           )
           .copyWith(background: Colors.white),
+      datePickerTheme: DatePickerThemeData(
+        backgroundColor: Colours.white,
+        dayStyle: TextStyle(
+          color: Colours.black,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w300,
+        ),
+        // Adjust the font size as needed
+      ),
     );
   }
 }

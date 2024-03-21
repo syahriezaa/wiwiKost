@@ -30,6 +30,7 @@ class ApiServices {
     );
 
     // Disable certificate verification (use it cautiously)
+    // ignore: deprecated_member_use
     (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
         (HttpClient client) {
       client.badCertificateCallback =

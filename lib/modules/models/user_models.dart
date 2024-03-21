@@ -5,6 +5,7 @@ class User {
   final String phoneNumber;
   final String address;
   final String nik;
+  final String isHaveRoom;
   final String accessToken;
   final String statusCode;
 
@@ -15,6 +16,7 @@ class User {
     required this.phoneNumber,
     required this.address,
     required this.nik,
+    required this.isHaveRoom,
     required this.accessToken,
     required this.statusCode,
   });
@@ -27,6 +29,7 @@ class User {
       phoneNumber: json['user']['phone_number'],
       address: json['user']['address'],
       nik: json['user']['nik'],
+      isHaveRoom: json['user']['is_have_room'],
       accessToken: json['access_token'],
       statusCode: json['status_code'],
     );
@@ -40,6 +43,7 @@ class User {
         'phone_number': phoneNumber,
         'address': address,
         'nik': nik,
+        'is_have_room': isHaveRoom,
       },
       'access_token': accessToken,
       'status_code': statusCode,
