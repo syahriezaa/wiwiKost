@@ -112,6 +112,17 @@ class AppTheme {
           .copyWith(background: Colors.white),
       datePickerTheme: DatePickerThemeData(
         backgroundColor: Colours.white,
+        weekdayStyle: TextStyle(
+          color: Colours.black,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w300,
+        ),
+        yearStyle: TextStyle(
+          color: Colours.black,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w300,
+        ),
+
         dayStyle: TextStyle(
           color: Colours.black,
           fontSize: 16.sp,

@@ -133,6 +133,7 @@ class RoomDetailRepositories {
       );
 
       return DetailRoomResponse.fromJson(response.data);
+      // ignore: deprecated_member_use
     } on DioError catch (e) {
       if (e.response != null) {
         return DetailRoomResponse(

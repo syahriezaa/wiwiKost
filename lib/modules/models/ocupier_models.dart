@@ -64,13 +64,14 @@ class OccupancyDetails {
   final String nextPaymentDate;
   final List<Resident> residents;
   final String subscriptionStatus;
+  final String statusCode;
 
-  OccupancyDetails({
-    required this.roomInformation,
-    required this.nextPaymentDate,
-    required this.residents,
-    required this.subscriptionStatus,
-  });
+  OccupancyDetails(
+      {required this.roomInformation,
+      required this.nextPaymentDate,
+      required this.residents,
+      required this.subscriptionStatus,
+      required this.statusCode});
 
   factory OccupancyDetails.fromJson(Map<String, dynamic> json) {
     return OccupancyDetails(
@@ -80,6 +81,7 @@ class OccupancyDetails {
       residents: List<Resident>.from(json['data']['residents']
           .map((resident) => Resident.fromJson(resident))),
       subscriptionStatus: json['data']['subscription_status'],
+      statusCode: json['status_code'],
     );
   }
 }

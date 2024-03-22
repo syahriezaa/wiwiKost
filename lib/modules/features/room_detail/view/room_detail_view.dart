@@ -21,7 +21,7 @@ class RoomDetailView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ///image list view
-              Container(
+              SizedBox(
                 height: 0.3.sh,
                 width: 1.sw,
                 child: Obx(
@@ -44,9 +44,7 @@ class RoomDetailView extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20.w),
                                   image: DecorationImage(
                                     image: NetworkImage(
-                                      'https://kos.brotani.com/' +
-                                          controller.roomData.value
-                                              .roomPhotos[index].roomPhoto,
+                                      'https://kos.brotani.com/${controller.roomData.value.roomPhotos[index].roomPhoto}',
                                     ),
                                     fit: BoxFit.cover,
                                   ),
@@ -123,20 +121,22 @@ class RoomDetailView extends StatelessWidget {
                 endIndent: 20.w,
                 indent: 20.w,
               ),
-              Obx(() => Text(
-                    // Display selected date
-                    controller.selectedDate.value != null
-                        ? 'Selected Date: ${controller.selectedDate.value!.toString().split(' ')[0]}'
-                        : 'No Date Selected',
-                    style: TextStyle(fontSize: 20),
-                  )),
-              SizedBox(height: 20),
+              Obx(
+                () => Text(
+                  // Display selected date
+                  controller.selectedDate.value != null
+                      ? 'Selected Date: ${controller.selectedDate.value!.toString().split(' ')[0]}'
+                      : 'No Date Selected',
+                  style: const TextStyle(fontSize: 20),
+                ),
+              ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Call function to open date picker
                   controller.pickDate(context);
                 },
-                child: Text('Select Date'),
+                child: const Text('Select Date'),
               ),
               Obx(
                 () => Row(

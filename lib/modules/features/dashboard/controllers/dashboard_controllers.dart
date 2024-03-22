@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:wiwikost/modules/features/dashboard/repositories/dashboard_repositories.dart';
 import 'package:wiwikost/modules/models/room_models.dart';
+import 'package:wiwikost/shared/services/local_db_service/local_db_service.dart';
 
 class DashboardController extends GetxController {
   final _currentIndex = 0.obs;
@@ -45,9 +46,15 @@ class DashboardController extends GetxController {
           await DashboardRepositories.listRoom(typeRoomCode.value, floor.value);
 
       // Check if the API call was successful
-      if (response.statusCode == '200' && response.status == 'success') {
+      if (response.statusCode == '200') {
         // Assign the list of rooms to the RxList
         rooms.assignAll(response.data);
+      }
+      if (response.statusCode == '401') {
+        await LocalDBService.clearToken();
+        await LocalDBService.clearUser();
+        await LocalDBService.clearIdOccupy();
+        Get.offAllNamed('/login');
       }
     } catch (e) {
       // Handle any exceptions

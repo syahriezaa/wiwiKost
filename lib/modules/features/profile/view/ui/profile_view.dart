@@ -5,6 +5,7 @@ import 'package:wiwikost/modules/features/profile/controllers/profile_controoler
 import 'package:wiwikost/shared/services/local_db_service/local_db_service.dart';
 import 'package:wiwikost/shared/widget/primary_button.dart';
 
+// ignore: must_be_immutable
 class ProfileView extends StatelessWidget {
   ProfileView({super.key});
   ProfileControllers controllers = Get.put(ProfileControllers());
@@ -39,7 +40,7 @@ class ProfileView extends StatelessWidget {
                       children: [
                         Text(
                           controllers.name.value,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),

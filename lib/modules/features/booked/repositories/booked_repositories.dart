@@ -24,7 +24,7 @@ class OcupancyDetailsRepository {
       final options = Options(headers: {'Authorization': 'Bearer $token'});
 
       final response = await _dio.post(
-        ApiConst.registerOccupy,
+        ApiConst.occupancyDetails,
         data: formData,
         options: options,
       );
@@ -48,6 +48,7 @@ class OcupancyDetailsRepository {
           nextPaymentDate: '',
           residents: [],
           subscriptionStatus: '',
+          statusCode: e.response!.data['status_code'],
         );
       } else {
         throw Exception('Error: $e');

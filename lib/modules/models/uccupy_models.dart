@@ -1,5 +1,3 @@
-import 'package:wiwikost/modules/models/user_models.dart';
-
 class OccupyModels {
   final String status;
   final String message;
